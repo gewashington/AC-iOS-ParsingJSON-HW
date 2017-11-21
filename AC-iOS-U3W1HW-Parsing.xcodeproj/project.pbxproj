@@ -13,6 +13,12 @@
 		541D38141FBCDEA900F6A0A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541D38121FBCDEA900F6A0A9 /* LaunchScreen.storyboard */; };
 		541D381C1FBCDFAC00F6A0A9 /* applstockinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 541D381B1FBCDFAC00F6A0A9 /* applstockinfo.json */; };
 		541D381E1FBCDFE100F6A0A9 /* userinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 541D381D1FBCDFE100F6A0A9 /* userinfo.json */; };
+		811EB3371FBF846E000D51CF /* AAPLStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EB3361FBF846E000D51CF /* AAPLStock.swift */; };
+		811EB3391FBF8B41000D51CF /* APPLStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EB3381FBF8B41000D51CF /* APPLStockViewController.swift */; };
+		811EB33B1FC32FEC000D51CF /* StockDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EB33A1FC32FEC000D51CF /* StockDetailedViewController.swift */; };
+		81AD249F1FBF358200B00CA8 /* UserInfoDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD249E1FBF358200B00CA8 /* UserInfoDetailedViewController.swift */; };
+		81BBCCF01FBE6F2800947B2F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBCCEF1FBE6F2800947B2F /* Users.swift */; };
+		81BBCCF21FBE721000947B2F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBCCF11FBE721000947B2F /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		541D38151FBCDEA900F6A0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		541D381B1FBCDFAC00F6A0A9 /* applstockinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = applstockinfo.json; sourceTree = "<group>"; };
 		541D381D1FBCDFE100F6A0A9 /* userinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userinfo.json; sourceTree = "<group>"; };
+		811EB3361FBF846E000D51CF /* AAPLStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLStock.swift; sourceTree = "<group>"; };
+		811EB3381FBF8B41000D51CF /* APPLStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPLStockViewController.swift; sourceTree = "<group>"; };
+		811EB33A1FC32FEC000D51CF /* StockDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailedViewController.swift; sourceTree = "<group>"; };
+		81AD249E1FBF358200B00CA8 /* UserInfoDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDetailedViewController.swift; sourceTree = "<group>"; };
+		81BBCCEF1FBE6F2800947B2F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		81BBCCF11FBE721000947B2F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,10 @@
 		541D38081FBCDEA900F6A0A9 /* AC-iOS-U3W1HW-Parsing */ = {
 			isa = PBXGroup;
 			children = (
+				811EB3381FBF8B41000D51CF /* APPLStockViewController.swift */,
+				811EB33A1FC32FEC000D51CF /* StockDetailedViewController.swift */,
+				81BBCCF11FBE721000947B2F /* UserInfoViewController.swift */,
+				81AD249E1FBF358200B00CA8 /* UserInfoDetailedViewController.swift */,
 				541D381F1FBCE08B00F6A0A9 /* Supporting Files */,
 				541D38151FBCDEA900F6A0A9 /* Info.plist */,
 			);
@@ -67,6 +83,8 @@
 		541D381F1FBCE08B00F6A0A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81BBCCEF1FBE6F2800947B2F /* Users.swift */,
+				811EB3361FBF846E000D51CF /* AAPLStock.swift */,
 				541D38091FBCDEA900F6A0A9 /* AppDelegate.swift */,
 				541D380D1FBCDEA900F6A0A9 /* Main.storyboard */,
 				541D38101FBCDEA900F6A0A9 /* Assets.xcassets */,
@@ -149,7 +167,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BBCCF01FBE6F2800947B2F /* Users.swift in Sources */,
+				81AD249F1FBF358200B00CA8 /* UserInfoDetailedViewController.swift in Sources */,
+				811EB3391FBF8B41000D51CF /* APPLStockViewController.swift in Sources */,
+				81BBCCF21FBE721000947B2F /* UserInfoViewController.swift in Sources */,
+				811EB33B1FC32FEC000D51CF /* StockDetailedViewController.swift in Sources */,
 				541D380A1FBCDEA900F6A0A9 /* AppDelegate.swift in Sources */,
+				811EB3371FBF846E000D51CF /* AAPLStock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
