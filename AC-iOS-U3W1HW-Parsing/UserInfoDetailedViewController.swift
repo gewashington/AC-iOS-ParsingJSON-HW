@@ -22,10 +22,10 @@ class UserInfoDetailedViewController: UIViewController {
             return
         }
        
-        userNameLabel.text? = userInfo.login.username
-        emailLabel.text? = userInfo.email
-        phoneLabel.text? = userInfo.phone
-        cellLabel.text? = userInfo.cell
+        userNameLabel.text? = "Username: \(userInfo.login.username)"
+        emailLabel.text? = "Email: \(userInfo.email)"
+        phoneLabel.text? = "Landline: \(userInfo.phone)"
+        cellLabel.text? = "Cell Phone: \(userInfo.cell)"
         
         if let url = URL(string: userInfo.picture.large) {
             DispatchQueue.global().sync {

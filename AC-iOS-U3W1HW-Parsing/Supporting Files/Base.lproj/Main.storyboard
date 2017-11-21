@@ -27,7 +27,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eol-b8-CXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="152"/>
+            <point key="canvasLocation" x="-785" y="-86"/>
         </scene>
         <!--Stocks-->
         <scene sceneID="40M-x8-ZJx">
@@ -44,7 +44,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJR-cf-dDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="917"/>
+            <point key="canvasLocation" x="513" y="660"/>
         </scene>
         <!--Stock View Controller-->
         <scene sceneID="K7E-Sa-HbP">
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZtS-kZ-gn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="915"/>
+            <point key="canvasLocation" x="1574" y="660"/>
         </scene>
         <!--Stock Detailed View Controller-->
         <scene sceneID="h3Z-Og-El2">
@@ -114,14 +114,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-FX-NdR">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open: $xxxxx.xx" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-nV-6Pd">
-                                <rect key="frame" x="82.666666666666671" y="383.33333333333331" width="248.66666666666663" height="21"/>
+                                <rect key="frame" x="81.999999999999986" y="383" width="248.66666666666663" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close: $xxxxx.xx" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWm-BT-EsB">
-                                <rect key="frame" x="82.666666666666671" y="424.33333333333331" width="248.66666666666663" height="22"/>
+                                <rect key="frame" x="81.999999999999986" y="424" width="248.66666666666663" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="SGe-lA-GBN"/>
                                 </constraints>
@@ -130,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-KR-D1u" userLabel="Stock Image">
-                                <rect key="frame" x="82.666666666666671" y="114.00000000000001" width="248.66666666666663" height="249.33333333333337"/>
+                                <rect key="frame" x="81.999999999999986" y="114.00000000000001" width="248.66666666666663" height="249.33333333333337"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,11 +148,16 @@
                             <constraint firstItem="NWm-BT-EsB" firstAttribute="centerX" secondItem="gCw-4B-YrW" secondAttribute="centerX" id="aeI-Px-tct"/>
                             <constraint firstItem="Cfi-nV-6Pd" firstAttribute="centerX" secondItem="gCw-4B-YrW" secondAttribute="centerX" id="fA7-ea-icX"/>
                             <constraint firstItem="MeE-KR-D1u" firstAttribute="height" secondItem="saa-yB-Zbr" secondAttribute="height" multiplier="0.4" id="hXT-Pi-x05"/>
+                            <constraint firstItem="Ff3-FX-NdR" firstAttribute="leading" secondItem="saa-yB-Zbr" secondAttribute="leading" id="ith-L7-59m"/>
                             <constraint firstItem="Cfi-nV-6Pd" firstAttribute="width" secondItem="saa-yB-Zbr" secondAttribute="width" multiplier="0.6" id="oqW-P4-zTb"/>
+                            <constraint firstItem="saa-yB-Zbr" firstAttribute="trailing" secondItem="Ff3-FX-NdR" secondAttribute="trailing" id="pDi-BH-Rky"/>
+                            <constraint firstItem="Ff3-FX-NdR" firstAttribute="top" secondItem="saa-yB-Zbr" secondAttribute="top" id="wMv-Lp-v6y"/>
+                            <constraint firstItem="saa-yB-Zbr" firstAttribute="bottom" secondItem="Ff3-FX-NdR" secondAttribute="bottom" id="z3X-HS-l7E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="saa-yB-Zbr"/>
                     </view>
                     <connections>
+                        <outlet property="gradientView" destination="Ff3-FX-NdR" id="Sl2-ce-fux"/>
                         <outlet property="stockClose" destination="NWm-BT-EsB" id="RVb-bJ-a0K"/>
                         <outlet property="stockImage" destination="MeE-KR-D1u" id="FzY-Ou-FNA"/>
                         <outlet property="stockOpen" destination="Cfi-nV-6Pd" id="Hmv-Ss-Cd8"/>
@@ -156,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LB7-Zj-hDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="916"/>
+            <point key="canvasLocation" x="2606" y="660"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="ch5-fp-4s7">
@@ -173,7 +182,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3R-Ng-XW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="-549"/>
+            <point key="canvasLocation" x="512" y="-86"/>
         </scene>
         <!--User Info View Controller-->
         <scene sceneID="Zh5-jV-6vM">
@@ -183,10 +192,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="C4t-Lf-Sxw">
-                                <rect key="frame" x="0.0" y="72" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V8U-ce-QeL">
                                 <rect key="frame" x="0.0" y="128" width="414" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,6 +229,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="C4t-Lf-Sxw">
+                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -232,9 +241,9 @@
                             <constraint firstItem="V8U-ce-QeL" firstAttribute="width" secondItem="C4t-Lf-Sxw" secondAttribute="width" id="HoX-Bs-uua"/>
                             <constraint firstItem="LA5-pX-UJU" firstAttribute="trailing" secondItem="V8U-ce-QeL" secondAttribute="trailing" id="Kko-Ab-Lro"/>
                             <constraint firstItem="C4t-Lf-Sxw" firstAttribute="width" secondItem="FyD-7l-AC6" secondAttribute="width" id="NUi-Nr-Nm8"/>
-                            <constraint firstItem="V8U-ce-QeL" firstAttribute="top" secondItem="C4t-Lf-Sxw" secondAttribute="bottom" id="V1A-7Z-Y9v"/>
+                            <constraint firstItem="V8U-ce-QeL" firstAttribute="top" secondItem="C4t-Lf-Sxw" secondAttribute="bottom" constant="8" id="V1A-7Z-Y9v"/>
                             <constraint firstItem="C4t-Lf-Sxw" firstAttribute="trailing" secondItem="LA5-pX-UJU" secondAttribute="trailing" id="YUW-Tz-Je1"/>
-                            <constraint firstItem="C4t-Lf-Sxw" firstAttribute="top" secondItem="LA5-pX-UJU" secondAttribute="top" constant="8" id="s0f-D2-nEB"/>
+                            <constraint firstItem="C4t-Lf-Sxw" firstAttribute="top" secondItem="LA5-pX-UJU" secondAttribute="top" id="s0f-D2-nEB"/>
                             <constraint firstItem="V8U-ce-QeL" firstAttribute="leading" secondItem="LA5-pX-UJU" secondAttribute="leading" id="xaS-zV-Wip"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LA5-pX-UJU"/>
@@ -247,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWz-vu-oFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="-549"/>
+            <point key="canvasLocation" x="1574" y="-86"/>
         </scene>
         <!--User Info Detailed View Controller-->
         <scene sceneID="IiJ-kE-QGu">
@@ -321,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggz-g5-uRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="-549"/>
+            <point key="canvasLocation" x="2606" y="-86"/>
         </scene>
     </scenes>
     <resources>

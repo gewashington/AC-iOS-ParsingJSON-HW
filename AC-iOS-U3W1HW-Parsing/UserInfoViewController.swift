@@ -23,7 +23,7 @@ class UserInfoViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     var filteredUserInfo: [People] {
-        guard let searchWord = searchWord, searchWord != "" else {
+        guard let searchWord = searchWord, !searchWord.isEmpty else {
             return users
         }
         return users.filter{
@@ -37,6 +37,7 @@ class UserInfoViewController: UIViewController, UITableViewDelegate, UITableView
         userInfoTableView.delegate = self
         userInfoTableView.dataSource = self
         searchBar.delegate = self
+        self.navigationItem.title = "Contacts"
         loadData()
         
     }
@@ -83,14 +84,12 @@ class UserInfoViewController: UIViewController, UITableViewDelegate, UITableView
                     let userInfo = try decoder.decode(Users.self, from: data)
                     self.users = userInfo.results
                 }
-                catch let error { //decide whether or not to keep this
+                catch let error { 
                     print(error)
                 }
             }
         }
     }
-    
-    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

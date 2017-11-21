@@ -9,11 +9,16 @@
 import UIKit
 
 class StockDetailedViewController: UIViewController {
+    @IBOutlet weak var gradientView: UIView!
     var stockResults: StockInfo? = nil
+    var gradientLayer = CAGradientLayer()
+    
+    
     
     @IBOutlet weak var stockImage: UIImageView!
     @IBOutlet weak var stockOpen: UILabel!
     @IBOutlet weak var stockClose: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +41,23 @@ class StockDetailedViewController: UIViewController {
         if let stockResults = stockResults {
             if stockResults.close > stockResults.open {
                 stockImage.image = #imageLiteral(resourceName: "thumbsUp")
-                self.view.backgroundColor = UIColor.green
+               gradientView.layer.addSublayer(gradientLayer)
+                gradientLayer.frame = self.view.bounds
+                gradientLayer.colors = [UIColor.green.cgColor, UIColor.black.cgColor]
+
             }
             else {
                 stockImage.image = #imageLiteral(resourceName: "thumbsDown")
+                gradientView.layer.addSublayer(gradientLayer)
+                gradientLayer.frame = self.view.bounds
+                gradientLayer.colors = [UIColor.black.cgColor, UIColor.red.cgColor]
                 self.view.backgroundColor = UIColor.red
                 
             }
         }
     }
+    
+    
     /*
      // MARK: - Navigation
      

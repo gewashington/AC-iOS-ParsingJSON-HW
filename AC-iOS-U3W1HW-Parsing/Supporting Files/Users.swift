@@ -47,5 +47,5 @@ struct Username: Codable {
 
 struct Photo: Codable {
     let large: String
-    let thumbnail: String
+   private(set) var thumbnail: String
 }

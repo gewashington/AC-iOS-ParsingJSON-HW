@@ -5,11 +5,6 @@
 //  Created by C4Q on 11/17/17.
 //  Copyright © 2017 C4Q . All rights reserved.
 //
-
-
-
-
-
 //VC
 //A table view
 //The table view should list each stock price in order from oldest to newest. Each table view cell should contain the date and the opening stock price. Feel free to use a default TableViewCell (e.g you don't need to create you own subclass).
@@ -30,6 +25,7 @@ class APPLStockViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         stockTableView.delegate = self
         stockTableView.dataSource = self
+        self.navigationItem.title = "Apple Stock History"
         loadData()
     }
     
@@ -45,7 +41,7 @@ class APPLStockViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitles[section] + "  |  Average:" + averageOpenInSection(section)
+        return sectionTitles[section] + "  |  Average: " + averageOpenInSection(section)
     }
     
     
